@@ -31,16 +31,12 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        app.startWatch();
-    },
+
 
     startWatch: function() {
-    // Update acceleration every 3 seconds
-    var options = { frequency: 500 };
-
-    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+        // Update acceleration every 3 seconds
+        var options = { frequency: 500 };
+        var watchID = navigator.accelerometer.watchAcceleration(app.onSuccess, app.onError, options);
     },
 
     onSuccess: function(acceleration) {
@@ -49,6 +45,10 @@ var app = {
         'Acceleration Y: ' + acceleration.y         + '<br />' +
         'Acceleration Z: ' + acceleration.z         + '<br />' +
         'Timestamp: '      + acceleration.timestamp + '<br />';
+    },
+
+    onError: function(){
+        alert("something went wrong");
     },
 
     // Update DOM on a Received Event
@@ -61,5 +61,10 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+        app.startWatch();
     }
 };
