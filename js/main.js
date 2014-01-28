@@ -2,17 +2,17 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        var canvas = document.getElementById("mainCanvas");
-        canvas.width = document.body.clientWidth; //document.width is obsolete
-        canvas.height = document.body.clientHeight; //document.height is obsolete
-
-        if( canvas.getContext )
-        {
-            setInterval( this.run , 33 );
-        }
+//        var canvas = document.getElementById("mainCanvas");
+//        canvas.width = document.body.clientWidth; //document.width is obsolete
+//        canvas.height = document.body.clientHeight; //document.height is obsolete
+//
+//        if( canvas.getContext )
+//        {
+//            setInterval( this.run , 33 );
+//        }
+//        this.ball = new Ball(canvas);
 
         this.bindEvents();
-        this.ball = new Ball(canvas);
     },
 
     run: function(){
