@@ -1,26 +1,25 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 var app = {
     // Application Constructor
     initialize: function() {
+        var canvas = document.getElementById("mainCanvas");
+        canvas.width = document.body.clientWidth; //document.width is obsolete
+        canvas.height = document.body.clientHeight; //document.height is obsolete
+
+        if( canvas.getContext )
+        {
+            setInterval( this.run , 33 );
+        }
+
         this.bindEvents();
+        this.ball = new Ball(canvas);
     },
+
+    run: function(){
+        this.ball.draw();
+        this.ball.move();
+    },
+
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -34,7 +33,24 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        app.startWatch();
     },
+
+    startWatch: function() {
+    // Update acceleration every 3 seconds
+    var options = { frequency: 500 };
+
+    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    },
+
+    onSuccess: function(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
+        'Acceleration Y: ' + acceleration.y         + '<br />' +
+        'Acceleration Z: ' + acceleration.z         + '<br />' +
+        'Timestamp: '      + acceleration.timestamp + '<br />';
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
