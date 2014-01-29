@@ -44,12 +44,6 @@ var app = {
         alert("something went wrong");
     },
 
-    startWatch: function() {
-        // Update acceleration every 3 seconds
-        var options = { frequency: 500 };
-        var watchID = navigator.accelerometer.watchAcceleration(app.onSuccess, app.onError, options);
-    },
-
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         console.log('Received Event: ' + id);
@@ -57,6 +51,7 @@ var app = {
 
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        app.startWatch();
+        var options = { frequency: 500 };
+        var watchID = navigator.accelerometer.watchAcceleration(app.onSuccess, app.onError, options);
     }
 };
