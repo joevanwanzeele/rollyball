@@ -61,7 +61,7 @@ var app = {
 
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        var options = { frequency: 10 };
+        var options = { frequency: 40 };
         var watchID = navigator.accelerometer.watchAcceleration(app.accelerometerSuccess, app.error, options);
         var opt = {frequency: 40};
         var watchCompassId = navigator.compass.watchHeading(app.compassSuccess, app.error, opt);

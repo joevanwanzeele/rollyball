@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a836d6a3-25c8-4442-9840-11de059e628e" name="Default" comment="updated meta info&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="www.iws" />
@@ -37,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="47" selection-start="1631" selection-end="1645" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1125">
+            <state line="63" column="36" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.7544338" vertical-offset="392" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -57,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.6896552" vertical-offset="0" max-vertical-offset="735">
+            <state line="32" column="12" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -99,8 +96,8 @@
         <option value="$PROJECT_DIR$/js/Ball.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/config.xml" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -352,16 +349,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="47" selection-start="1631" selection-end="1645" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1125">
+        <state line="32" column="12" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.6896552" vertical-offset="0" max-vertical-offset="735">
+        <state line="63" column="36" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.7544338" vertical-offset="392" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
