@@ -1,3 +1,9 @@
+function roundNumber(num) {
+    var dec = 3;
+    var result = Math.round(num*Math.pow(10,dec))/Math.pow(10,dec);
+    return result;
+}
+
 
 var app = {
     // Application Constructor
@@ -32,7 +38,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
 
-    onSuccess: function(acceleration) {
+    accelerometerSuccess: function(acceleration) {
         var element = document.getElementById('accelerometer');
         element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
         'Acceleration Y: ' + acceleration.y         + '<br />' +
@@ -40,8 +46,12 @@ var app = {
         'Timestamp: '      + acceleration.timestamp + '<br />';
     },
 
-    onError: function(){
-        alert("something went wrong");
+    compassSuccess: function(compass){
+        document.getElementById('compassHeading').innerHTML = roundNumber(compass.magneticHeading);
+    },
+
+    error: function(e){
+        alert("something went wrong: " + e);
     },
 
     // Update DOM on a Received Event
@@ -52,6 +62,8 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         var options = { frequency: 10 };
-        var watchID = navigator.accelerometer.watchAcceleration(app.onSuccess, app.onError, options);
+        var watchID = navigator.accelerometer.watchAcceleration(app.accelerometerSuccess, app.error, options);
+        var opt = {frequency: 40};
+        var watchCompassId = navigator.compass.watchHeading(app.compassSuccess, app.error, opt);
     }
 };
