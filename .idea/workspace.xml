@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a836d6a3-25c8-4442-9840-11de059e628e" name="Default" comment="updated meta info&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="www.iws" />
@@ -37,7 +38,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="36" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.7544338" vertical-offset="392" max-vertical-offset="1125">
+            <state line="88" column="110" selection-start="3037" selection-end="3037" vertical-scroll-proportion="0.7953615" vertical-offset="737" max-vertical-offset="1470">
               <folding />
             </state>
           </provider>
@@ -57,7 +58,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="735">
+            <state line="33" column="43" selection-start="1447" selection-end="1447" vertical-scroll-proportion="-19.0" vertical-offset="39" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -66,7 +67,7 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="22" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0" vertical-offset="1112" max-vertical-offset="1920">
+            <state line="120" column="22" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
@@ -337,7 +338,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="22" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0" vertical-offset="1112" max-vertical-offset="1920">
+        <state line="120" column="22" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="1920">
           <folding />
         </state>
       </provider>
@@ -351,14 +352,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="735">
+        <state line="33" column="43" selection-start="1447" selection-end="1447" vertical-scroll-proportion="-19.0" vertical-offset="39" max-vertical-offset="750">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="36" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.7544338" vertical-offset="392" max-vertical-offset="1125">
+        <state line="88" column="110" selection-start="3037" selection-end="3037" vertical-scroll-proportion="0.7953615" vertical-offset="737" max-vertical-offset="1470">
           <folding />
         </state>
       </provider>

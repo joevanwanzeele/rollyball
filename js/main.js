@@ -4,8 +4,10 @@ function roundNumber(num) {
     return result;
 }
 
+var startingCompassPosition;
 
 var app = {
+
     // Application Constructor
     initialize: function() {
 //        var canvas = document.getElementById("mainCanvas");
@@ -47,7 +49,16 @@ var app = {
     },
 
     compassSuccess: function(compass){
-        document.getElementById('compassHeading').innerHTML = roundNumber(compass.magneticHeading);
+        var heading = roundNumber(compass.magneticHeading);
+        if (!startingCompassPosition)
+        {
+            startingCompassPosition = heading;
+        }
+        document.getElementById('compassHeading').innerHTML = heading;
+    },
+
+    tilt: function(orientation){
+        document.getElementById('gyroscopeReading').innerHTML = orientation[0] + " : " + orientation[1];
     },
 
     error: function(e){
@@ -61,9 +72,21 @@ var app = {
 
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener("deviceorientation", function () {
+                app.tilt([event.beta, event.gamma]);
+            }, true);
+        } else if (window.DeviceMotionEvent) {
+            window.addEventListener('devicemotion', function () {
+                app.tilt([event.acceleration.x * 2, event.acceleration.y * 2]);
+            }, true);
+        } else {
+            window.addEventListener("MozOrientation", function () {
+                app.tilt([orientation.x * 50, orientation.y * 50]);
+            }, true);
+        }
         var options = { frequency: 40 };
         var watchID = navigator.accelerometer.watchAcceleration(app.accelerometerSuccess, app.error, options);
-        var opt = {frequency: 40};
-        var watchCompassId = navigator.compass.watchHeading(app.compassSuccess, app.error, opt);
+        var watchCompassId = navigator.compass.watchHeading(app.compassSuccess, app.error, options);
     }
 };
