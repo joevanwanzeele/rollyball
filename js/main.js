@@ -86,7 +86,7 @@ var app = {
             }, true);
         }
         var options = { frequency: 40 };
-        var watchID = navigator.accelerometer.watchAcceleration(app.accelerometerSuccess, app.error, options);
-        var watchCompassId = navigator.compass.watchHeading(app.compassSuccess, app.error, options);
+        //var watchID = navigator.accelerometer.watchAcceleration(app.accelerometerSuccess, app.error, options);
+        //var watchCompassId = navigator.compass.watchHeading(app.compassSuccess, app.error, options);
     }
 };
